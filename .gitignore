@@ -3,3 +3,6 @@ sequences-train/*.bmp
 
 evals/*.png
 evals/*.bmp
+
+farneback/
+sequences-train/
