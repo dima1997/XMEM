@@ -3,5 +3,3 @@ sequences-train/*.bmp
 
 evals/*.png
 evals/*.bmp
-
-sequences-train/
