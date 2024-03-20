@@ -1,1 +1,0 @@
-Save train images (.png, .bmp, etc) here
