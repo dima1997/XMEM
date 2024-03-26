@@ -3,7 +3,7 @@ Paper: https://arxiv.org/pdf/2207.07115v2.pdf
 
 # 1. How to perform inference on a new video with a segmentation mask for the first frame.
 
-Follow the se 
+To perform the object segmentation follow the step by step shown below.
 
 ## Step 1: Open XMem.ipynb in Google Colab
 This notebook is an adaptation of the demo notebook provided by the authors of the Xmem paper (available in their repository https://github.com/hkchengrex/XMem). It should be oppened in a session with a GPU for proper execution.
