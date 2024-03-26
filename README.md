@@ -42,3 +42,37 @@ The results are stored in the folder **/content/XMem/results/{name}** automatica
 2. **out-{name}-001.png** for the segmentation mask of the first frame
 
 The results can be downloaded individually or zipped using the terminal on colab.
+
+# 2. How to compute metrics over the output videos.
+
+## Step 1: Open project.ipynb in a jupyter notebook
+This notebook notebook is used to evaluate the performance of the presented method in comparison to other methods such as Fanerback.
+
+## Step 2: Set up the 'Configuration' cell
+In this cell we define the path to directories containing images, ground truth masks and predictions as follows:
+```
+METHODS = {
+    "Farneback" : "farneback/results",
+    "XMEM" : "XMEM/results",
+}
+
+TRAIN_DIR = "sequences-train/"
+
+TRAIN_SEQ = {
+    "bag": (1, 196),
+    "bear": (1, 26),
+    "book": (1, 51),
+    "camel": (1, 90),
+    "rhino": (1, 90),
+    "swan": (1, 26)
+}
+```
+`METHODS`: Paths to methods results
+`TRAIN_DIR`: Paths to input sequences and masks
+`TRAIN_SEQ`: Dictionary of output sequences names, start and end frames indexes.
+
+## Step 3: Run 'Results Visualization ' cells
+This section of the notebook is in charge of computing metrics (dice, f-meausure, centroid distance) over the predicted sequences segmentations of the different methods defined above. Plots will be showed and metrics matrix will be saved in the same folders as methods results.
+```
+plot_results(methods_dict=METHODS, seq_dict=TRAIN_SEQ, gt_dir=TRAIN_DIR)
+```
